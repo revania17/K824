@@ -28,7 +28,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    padding: 2%;
+    padding: 1%;
     font-weight: bold;
     font-size: 15pt;
     justify-content: center;
@@ -43,6 +43,7 @@ header {
     font-size: 20pt;
 }
 
+/* search */
 .input-search {
     width: 30%;
     border: none;
@@ -60,7 +61,9 @@ header {
     width: 7%;
     font-weight: bold;
 }
+/* search */
 
+/* navbar */
 nav {
     margin-top: 20px;
 }
@@ -78,13 +81,14 @@ nav ul li a {
 nav ul li a:hover {
     border-bottom: 3px solid var(--white);
 }
+/* navbar */
 
-/* IMG */
+/* HOME*/
 .slider {
     margin-top: 10%;
     display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: auto;
+    margin-right: auto;
     width: 65%;
 }
 
@@ -113,9 +117,9 @@ nav ul li a:hover {
 .choose_1:checked~.slides>.s1 {
     margin-left: -50rem;
 }
+/* HOME END */
 
-/* IMG END */
-
+/* produk */
 .overlay {
     position: fixed;
     top: 0;
@@ -176,7 +180,7 @@ nav ul li a:hover {
 
 .populer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -215,6 +219,42 @@ link a:hover {
 .pesan img {
     width: 30px;
 }
+/* produk */
+
+/* tambahan promo */
+.promo-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.promo-box {
+    background-color: var(--blue);
+    padding: 20px;
+    width: 300px;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.promo-box:hover {
+    transform: scale(1.05);
+}
+
+.promo-box h3 {
+    font-size: 1.5em;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.promo-box p {
+    color: var(--white);
+}
+/* promo end */
 
 .tentang {
     display: grid;
