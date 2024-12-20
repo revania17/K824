@@ -1,344 +1,85 @@
-:root {
-    --blue: #2c2546;
-    --dark-blue: #1b1535;
-    --green: #00eb09;
-    --white: #fff;
-    --red-maroon: #800000;
-    --black: #111010;
-
-
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-}
-
 body {
-    background-color: var(--black);
-    color: var(--white);
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    /* warna latar belakang gelap */
+    color: #c9d1d9;
+    /* warna teks */
 }
 
-header {
-    align-items: center;
-    position: fixed;
+.navbar {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    /* gradasi warna */
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+}
+
+.carousel-inner img {
     width: 100%;
-    top: 0;
-    padding: 1%;
-    font-weight: bold;
-    font-size: 15pt;
-    justify-content: center;
-    text-align: center;
-    background-color: var(--dark-blue);
-    top: 0;
+    /* Pastikan gambar memenuhi lebar carousel */
+    height: auto;
+    /* Sesuaikan tinggi gambar */
 }
 
-.title {
-    color: var(--white);
-    border-bottom: 1px solid var(--white);
-    font-size: 20pt;
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    /* Atur lebar tombol navigasi */
+    top: 50%;
+    /* Posisikan tombol di tengah */
+    transform: translateY(-50%);
+    /* Pindahkan tombol ke tengah vertikal */
 }
 
-/* search */
-.input-search {
-    width: 30%;
-    border: none;
-    border-radius: 0 0 0 10px;
-    padding: 10px;
-}
-
-.input-submit {
-    margin-left: -5px;
-    border: none;
-    border-radius: 0 10px 0 0;
-    padding: 10px;
-    background-color: var(--blue);
-    color: var(--white);
-    width: 7%;
-    font-weight: bold;
-}
-/* search */
-
-/* navbar */
-nav {
-    margin-top: 20px;
-}
-
-nav ul {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-}
-
-nav ul li a {
-    color: var(--white);
-}
-
-nav ul li a:hover {
-    border-bottom: 3px solid var(--white);
-}
-/* navbar */
-
-/* HOME*/
-.slider {
-    margin-top: 10%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 65%;
-}
-
-.slider h4 {
-    margin-top: 20%;
-
-}
-
-.slides {
-    display: flex;
-    width: 50rem;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.slides img {
-    border-radius: 10px;
-
-}
-
-.slide {
-    width: 50rem;
-    transition: .5s;
-}
-
-.choose_1:checked~.slides>.s1 {
-    margin-left: -50rem;
-}
-/* HOME END */
-
-/* produk */
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.overlay:target {
-    visibility: visible;
-    opacity: 1;
-}
-
-.popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: var(--dark-blue);
-    border-radius: 5px;
-    width: 30%;
-    position: relative;
-    transition: all 5s ease-in-out;
-}
-
-.popup h2 {
-    margin-top: 0;
-    color: var(--white);
-    font-family: Tahoma, Arial, sans-serif;
-}
-
-.popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-}
-
-.popup .close:hover {
-    color: #06D85F;
-}
-
-.content {
-    max-height: 30%;
-    width: 50%;
-}
-
-.title-p {
-    margin-top: 5%;
-    margin-left: 60px;
-}
-
-.populer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.populer img {
-    border-radius: 10px;
-}
-
-.harga {
-    color: var(--green);
-}
-
-.link a {
-    color: var(--white);
-    transition: ease-in-out;
-    transition-duration: 0.5s;
-    cursor: pointer;
-}
-
-link a:hover {
-    color: var(--green);
-}
-
-.pesan {
-    background-color: var(--green);
-    padding: 5%;
-    border-radius: 10px;
-}
-
-.pesan:hover {
-    background-color: white;
-
-}
-
-.pesan img {
-    width: 30px;
-}
-/* produk */
-
-/* tambahan promo */
-.promo-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 20px;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Tambahkan latar belakang untuk tombol */
+    border-radius: 50%;
+    /* Buat tombol bulat */
 }
 
 .promo-box {
-    background-color: var(--blue);
+    background: linear-gradient(120deg, #1e90ff, #00fa9a);
+    /* gradasi neon */
+    color: white;
     padding: 20px;
-    width: 300px;
-    border: 1px solid var(--white);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .promo-box:hover {
-    transform: scale(1.05);
-}
-
-.promo-box h3 {
-    font-size: 1.5em;
-    color: var(--white);
-    margin-bottom: 10px;
-}
-
-.promo-box p {
-    color: var(--white);
-}
-/* promo end */
-
-/* tentang kami */
-.tentang {
-    display: grid;
-    justify-content: center;
-    margin-top: 10%;
-    font-size: 15pt;
+    transform: scale(1.1);
+    background: linear-gradient(120deg, #00fa9a, #1e90ff);
 }
 
 .card {
-    background-color: var(--blue);
-    padding: 5%;
-    border-radius: 10px;
-    box-shadow: 20px 20px black;
+    background: #161b22;
+    color: #c9d1d9;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card h1 {
-    text-align: center;
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 255, 204, 0.4);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-/* tentang kami */
-
-/* footer */
-footer {
-    display: grid;
-    justify-content: center;
-    background-color: var(--blue);
-    margin-top: 10%;
-    padding: 2%;
+#kontak {
+    background: linear-gradient(90deg, #8e2de2, #4a00e0);
+    color: white;
+    padding: 40px 0;
 }
 
-.sosmed img {
+.social-icons img {
     width: 50px;
-    border-radius: 10px;
+    margin: 0 15px;
+    border-radius: 50%;
+    transition: transform 0.3s;
 }
 
-#copyright {
-    text-align: center;
-    padding: 10px;
+.social-icons img:hover {
+    transform: scale(1.2);
 }
-/* footer end */
-
-/* responsive */
-@media screen and (max-width: 600px) {
-    nav ul li a {
-        font-size: 11pt;
-    }
-
-    .slider {
-        display: none;
-    }
-
-    .title-p {
-        padding-top: 6rem;
-        margin-left: 20px;
-    }
-
-    .populer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        font-size: 10pt;
-    }
-
-    .link img {
-        width: 80%;
-    }
-
-    .tentang {
-        width: 90%;
-        padding-left: 2rem;
-        font-size: 13pt;
-    }
-
-    .sosmed {
-        font-size: 10pt;
-        padding-left: 2rem;
-    }
-
-    .sosmed img {
-        width:10% ;
-    }
-}
-
-/* responsive end */
