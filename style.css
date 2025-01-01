@@ -4,6 +4,7 @@ body {
     color: #c9d1d9;
 }
 
+/* navbar */
 .navbar {
     background: linear-gradient(90deg, #6a11cb, #2575fc);
     /* gradasi warna */
@@ -13,12 +14,13 @@ body {
 .nav-link {
     color: white !important;
 }
+/* navbar end */
 
+/* gambar slide 1 dan 2 */
 .carousel-inner img {
     width: 100%;
     /* Gambar memenuhi lebar carousel */
     height: auto;
-    /* menyesuaikan tinggi gambar */
 }
 
 .carousel-control-prev,
@@ -37,7 +39,9 @@ body {
     border-radius: 50%;
     /* Buat tombol bulat */
 }
+/* gambar end */
 
+/* form user */
 .row {
     justify-content: center;
 }
@@ -47,7 +51,9 @@ body {
     background-color: #f0f8ff;
     border: 1px solid #1e90ff;
 }
+/* form user end */
 
+/* kotak promo */
 .promo-box {
     background: linear-gradient(120deg, #1e90ff, #00fa9a);
     color: white;
@@ -60,10 +66,12 @@ body {
     transform: scale(1.1);
     background: linear-gradient(120deg, #00fa9a, #1e90ff);
 }
+/* promo end */
 
+/* produk */
 .card {
     background: #161b22;
-    color: #c9d1d9;
+    color: white;
     border: none;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -72,7 +80,9 @@ body {
     transform: scale(1.05);
     box-shadow: 0 4px 20px rgba(0, 255, 204, 0.4);
 }
+/* produk end */
 
+/* kontak */
 #kontak {
     background: linear-gradient(90deg, #8e2de2, #4a00e0);
     color: white;
@@ -89,3 +99,4 @@ body {
 .social-icons img:hover {
     transform: scale(1.2);
 }
+/* kontak end */
