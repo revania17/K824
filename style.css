@@ -41,18 +41,6 @@ body {
 }
 /* gambar end */
 
-/* form user */
-.row {
-    justify-content: center;
-}
-
-.form-control {
-    width: 200px;
-    background-color: #f0f8ff;
-    border: 1px solid #1e90ff;
-}
-/* form user end */
-
 /* kotak promo */
 .promo-box {
     background: linear-gradient(120deg, #1e90ff, #00fa9a);

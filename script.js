@@ -1,3 +1,4 @@
+// notif user id
 // ambil elemen input dan tombol
 const userIdInput = document.querySelector('input[placeholder="Masukkan User ID"]');
 const zoneIdInput = document.querySelector('input[placeholder="Zone ID"]');
@@ -10,8 +11,32 @@ submitBtn.addEventListener('click', function () {
 
     // cek apakah kedua input sudah diisi
     if (userId && zoneId) {
-        alert(`berhasil! user id: ${userId}, zone id: ${zoneId}`);
+        alert(`Berhasil! User ID: ${userId}, Zone ID: ${zoneId}`);
     } else {
-        alert('gagal! pastikan user id dan zone id sudah diisi.');
+        alert('Gagal! Pastikan User ID dan Zone ID Sudah Diisi.');
     }
-});
+})
+// user id end
+
+// login daftar akun
+// fungsi untuk menampilkan notifikasi sukses atau gagal
+function submitForm(event) {
+    event.preventDefault(); // mencegah halaman refresh
+
+    // ambil nilai dari input email dan password
+    const email = document.getElementById('exampleInputEmail1').value;
+    const password = document.getElementById('exampleInputPassword1').value;
+
+    // validasi sederhana untuk email dan password
+    if (email && password) {
+        alert('Akun Berhasil Didaftarkan!');
+        window.location.href = 'index.html'; // ke beranda
+    } else {
+        alert('Gagal Mendaftarkan Akun. Pastikan Semua Sudah Terisi.');
+    }
+}
+
+// tambahkan event listener ke form
+const form = document.querySelector('form');
+form.addEventListener('submit', submitForm);
+// login daftar akun end
