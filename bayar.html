@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pembayaran</title>
+  <title>Metode Pembayaran</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -11,6 +12,7 @@
       color: #fff;
       font-family: Arial, sans-serif;
     }
+
     .pembayaran-card {
       background: #fff;
       color: #333;
@@ -22,72 +24,172 @@
       transition: transform 0.3s, box-shadow 0.3s;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
     .pembayaran-card:hover {
       transform: scale(1.05);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
+
     .p1 {
       font-weight: bold;
       font-size: 1.5rem;
       color: #6a11cb;
     }
+
     .info {
       font-size: 1.2rem;
       color: #28a745;
       font-weight: bold;
     }
+
     .container {
       background: rgba(255, 255, 255, 0.1);
       border-radius: 15px;
       padding: 30px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
+
     h3 {
       color: #fff;
+      margin-top: -50px;
+    }
+
+    a {
+      text-decoration: none;
     }
   </style>
 </head>
+
 <body>
-  <div class="container mt-4">
-    <h4 class="mb-4"><img src="dm ml.png" alt="Diamond Icon" style="width: 100px; margin-right: 10px;"> Pilih Metode Pembayaran</h4>
+  <!-- kontainer metode pembayaran -->
+  <div class="mt-5">
+    <h3 class="text-center">
+      <img src="images/dm ml.png" alt="diamond icon" style="width: 100px; margin-right: 10px; ">
+      Metode Pembayaran
+    </h3>
     <div class="row">
       <div class="col-md-4">
         <div class="pembayaran-card">
-            <h5 class="p1">Dana</h5>
+          <img src="images/danaa.png" alt="">
+          <h5 class="p1">Dana</h5>
           <div class="info">Dapatkan potongan sebesar 4%</div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="pembayaran-card">
-            <h5 class="p1">ShopeePay</h5>
+          <img src="images/shopee.png" alt="">
+          <h5 class="p1">Shopeepay</h5>
           <div class="info">Dapatkan potongan sebesar 3%</div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="pembayaran-card">
-            <h5 class="p1">Gopay</h5>
+          <img src="images/gopay.png" alt="">
+          <h5 class="p1">Gopay</h5>
           <div class="info">Dapatkan potongan sebesar 2%</div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="pembayaran-card">
-            <h5 class="p1">OVO</h5>
+          <img src="images/ovo.png" alt="">
+          <h5 class="p1">Ovo</h5>
           <div class="info">Dapatkan potongan sebesar 1%</div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="pembayaran-card">
-            <h5 class="p1">Transfer Bank</h5>
-          <div class="info">BCA, BRI, BNI, dan Mandiri</div>
+          <img src="images/transfer.png" alt="">
+          <h5 class="p1">Transfer bank</h5>
+          <div class="info">Bca, Bri, dan Mandiri</div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="pembayaran-card">
-            <h5 class="p1">Pulsa</h5>
-          <div class="info">Telkomsel, Indosat, XL, dan Tri </div>
+          <img src="images/pulsa.png" alt="">
+          <h5 class="p1">Pulsa</h5>
+          <div class="info">Telkomsel, Indosat, dan Xl</div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="container mt-5">
+
+    <h2 class="text-center mb-4" style="color:white;">Pilih Metode Pembayaran</h2>
+    <form id="paymentForm">
+      <div class="mb-3">
+        <label for="paymentMethod" class="form-label">Metode Pembayaran</label>
+        <select id="paymentMethod" class="form-select" required>
+          <option value="">Pilih Metode Pembayaran</option>
+          <option value="Dana">Dana</option>
+          <option value="Shopeepay">Shopeepay</option>
+          <option value="Gopay">Gopay</option>
+          <option value="Ovo">Ovo</option>
+          <option value="Transfer Bank">Transfer Bank</option>
+          <option value="Pulsa">Pulsa</option>
+        </select>
+      </div>
+      <div>
+        <div class="mb-3">
+          <label for="paymentNumber" class="form-label">Nomor Pembayaran</label>
+          <input type="text" class="form-control" id="paymentNumber" required placeholder="Masukkan Nomor Pembayaran">
+        </div>
+
+        <div class="mb-3">
+          <label for="userName" class="form-label">Nama Pengguna</label>
+          <input type="text" class="form-control" id="userName" required placeholder="Masukkan Nama Pengguna">
+        </div>
+
+        <div class="mb-3">
+          <label for="zoneId" class="form-label">Zone ID</label>
+          <input type="text" class="form-control" id="zoneId" required placeholder="Masukkan Zone ID">
+        </div>
+
+        <button type="submit" class="btn btn-light w-100">Proses Pembayaran</button>
+    </form>
+  </div>
+  </div>
+  </div>
+
+  <div class="container mt-5 d-none text-center" id="successContainer">
+    <h2 class="text-center mb-4">Pembayaran Berhasil!</h2>
+    <p><strong>Metode Pembayaran:</strong> <span id="successPaymentMethod"></span></p>
+    <p><strong>Nomor Pembayaran:</strong> <span id="successPaymentNumber"></span></p>
+    <p><strong>Nama Pengguna:</strong> <span id="successUserName"></span></p>
+    <p><strong>Zone ID:</strong> <span id="successZoneId"></span></p>
+    <button class="btn btn-light w-100" onclick="window.location.href='index.html'">Kembali</button>
+  </div>
+
+
+  <script>
+    const paymentForm = document.getElementById('paymentForm');
+    const successContainer = document.getElementById('successContainer');
+    const successPaymentMethod = document.getElementById('successPaymentMethod');
+    const successPaymentNumber = document.getElementById('successPaymentNumber');
+    const successUserName = document.getElementById('successUserName');
+    const successZoneId = document.getElementById('successZoneId');
+
+    paymentForm.addEventListener('submit', function (event) {
+      event.preventDefault(); // mencegah reload halaman
+
+      // mengambil data dari form
+      const paymentMethod = document.getElementById('paymentMethod').value;
+      const paymentNumber = document.getElementById('paymentNumber').value;
+      const userName = document.getElementById('userName').value;
+      const zoneId = document.getElementById('zoneId').value;
+
+      // menampilkan data pada container sukses
+      successPaymentMethod.textContent = paymentMethod;
+      successPaymentNumber.textContent = paymentNumber;
+      successUserName.textContent = userName;
+      successZoneId.textContent = zoneId;
+
+      // menyembunyikan form dan menampilkan container sukses
+      paymentForm.parentElement.classList.add('d-none');
+      successContainer.classList.remove('d-none');
+    });
+  </script>
+
 </body>
+
 </html>
